@@ -6,4 +6,5 @@ ADD Cargo.lock .
 ADD Rocket.toml .
 ENV RUSTFLAGS="-A dead_code"
 RUN cargo build --release
+EXPOSE 8000
 ENTRYPOINT ["target/release/player-rust-rocket"]
